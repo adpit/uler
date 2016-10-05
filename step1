@@ -1,0 +1,186 @@
+### tanda >>> berarti baris yang di ekskusi melalui pyhton ###
+
+# variables  : penaman variabels 
+var   	= 	5
+(name) 		(value)
+
+>>> var = 5
+>>> var 
+5
+
+# naming : syarat membuat nama variables besarkecil, dan tanpa spasi
+bigFoot 	= 	4
+(lowercase) (upercase, no spaces)
+
+>>> big foot = 5
+  File "<stdin>", line 1
+    big foot = 5
+           ^
+SyntaxError: invalid syntax
+>>> big foot = 56
+  File "<stdin>", line 1
+    big foot = 56
+           ^
+SyntaxError: invalid syntax
+
+
+# reassigning values : memberikan / assing value baru ke dalam variables
+
+>>> bigFoot = 4
+>>> bigFoot
+4
+>>> bigFoot =  5
+>>> bigFoot
+5
+
+
+# MATH : operasi matematik
+# + add 
+# - subtract 
+# * multiply 
+# / divide 
+# () parenthesis
+# ** power
+# % remainder
+
+>>> 5+5 
+10
+>>> 4+6
+10
+>>> 4-5
+-1
+>>> 8*2
+16
+>>> 32*54
+1728
+>>> 32*32
+1024
+>>> 32/32
+1
+
+# INT vs FLOAT : bedanya tampilan nilai INT dan FLOAT adalah pada titik
+# integer = 0, 15, 500, 322
+# float = 2.3, 6.488, 7.0
+
+>>> 100.0000000
+100.0
+>>> 100.0
+100.0
+>>> 100 #interger tanpa titik
+100
+>>> 100.000000 #float dengan titik
+100.0
+>>> 3/2 #value int
+1
+>>> 3/2.0 #value float
+1.5
+
+# FLOAT() : ini akan mengkonversi nilai INT kedalam bentuk float, banding diatas tanpa penyebutan, float(someValue)
+float(3) 	---> 3.0
+float(3)/2 	---> 1.5
+
+
+>>> float(3/2)
+1.0
+>>> float(3)/2
+1.5
+>>> float(5)/4
+1.25
+
+# INT() : ini akan mengkonversi nilai float kedalam bentuk INT, banding diatas tanpa penyebutan, int(someValue)
+int(3.0) 	---> 3
+int(3.0)/2	---> 1
+
+>>> int(3.0)
+3
+>>> int(3.0)/2
+1
+
+# MATH operational %  (remandinder)  dan ** (power)
+>>> 5 % 4
+1
+>>> 10 % 5
+0
+>>> 11 % 5
+1
+>>> 12 % 5
+2
+>>> 12 ** 2
+144
+>>> 16 ** 0.5
+4.0
+
+# MATH Operate  () parentheses : untuk mengatur mana bilangan yang harus dikerjakan dahulu
+4*(4+4) 	--->	32
+33/(1+2) 	--->	11
+
+>>> 5 + (35+13+2)
+55
+>>> 5*(5+5)
+50
+>>> 33/(1+2)
+11
+
+
+# other fungctions MATH
+
+abs() = absolute value
+sin() = sin of 
+cos() = coseine of
+floor() = round down
+ceil() =  round up
+pow() = power (aka **)
+and more
+
+
+### KUIS ####
+
+# soal
+x = 5 
+x = x ** x 
+x = ???
+
+g = 5 
+h = 7 
+h = g + h 
+h = ???
+
+w = 7 % 3 
+w = ???
+
+z = 5 
+z += 2
+z = ???
+
+a = 45 
+a *= 3
+a = ???
+
+# jawaban
+>>> x =  5 
+>>> x = x ** x 
+>>> x
+3125
+
+>>> g = 5 
+>>> h = 7 
+>>> h = g + h
+>>> h
+12
+
+>>> 7 % 3
+1
+
+>>> w = 7 % 3
+>>> w
+1
+
+>>> z = 5
+>>> z += 2
+>>> z
+7
+
+>>> a = 45
+>>> a *= 3
+>>> a
+135
