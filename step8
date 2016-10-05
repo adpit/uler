@@ -1,0 +1,102 @@
+# FUNCTIONS : mengambungkan banyak actions kedalam sebuah satu proses, untuk dapat digunakan kembali 
+
+# bagaimana caranya function dapat bekerja , bagaimana bentuknya? 
+# def doesNothing():
+#     pass
+
+# penjelasan 
+# def 		= 'definie' atau dekalrasi sebuah function
+# doesNothing	= nama functions yang akan kita buat, ini yang digunakan saat fungsi akan di pangil
+# ():  		= INPUT : argument skrip yang akan di jalankan dimasukan kedalam ()
+# pass		= code utama kita ditempat disini
+
+# cara buat function
+>>> def doesNoting():
+...     pass
+... 
+
+# lalu cara memangil function yang kita buat bagaimana? yap cukup di ketik saja nama functionsnya
+>>> doesNoting()
+>>> 
+
+# RETURN 	= sebuah cara untuk OUTPUT atau mengembalikan data dari sebuah fungsi
+>>> def makeOne():
+...     return 100
+... 
+>>> x = makeOne()
+>>> print x
+100
+
+# ARGUMENTS 	= sebuah cara untuk INPUT atau pass didalam data ke sebuah fungsi
+# analoginya INPUT (arguments) contoh bensin mobil dan OUTPUT(return) contoh mobil bergerak
+
+# ada 2 tipe ARGUMENTS 
+# REGULAR ARGUMENTS # KEYWORD ARGUMENS 	
+# bentuknya 
+# def myFunc(var1,var2=3):
+# ..
+
+# var1 sebagai regular arguments , sedangkan var2 = 3 sebagai keyword arguments
+
+>>> def addTen(myInt):
+...     myInt += 10
+...     return myInt
+... 
+>>> x = 12
+>>> dir() # untuk melihat varible fungsi yang telah kita buat
+['__builtins__', '__doc__', '__name__', '__package__', 'addTen', 'x']
+>>> y = addTen(x)
+>>> print x,y
+12 22
+
+kenapa x bisa dapat 12? benar karena baris ini x = 12 
+kenapa y bisa dapat 22? karena baris ini y = addTen(x), dimana x ditambahkan += 10 pada fungsi addTen
+
+# LOCAL VS GLOBAL VARIABLE 	= local variables dibuat dan disimpan WITHIN sebuah fungsi  yang akan didelete oleh memory ketika fungsi COMPLETES, ada dalam block 
+# bentuknya 
+# def myFunc():
+#    localVar = 5
+
+# GLOBAL VARIABLE 		= variable yang dapat di akses dari mana saja  mengunakan keyword 'global'
+# bentuknya
+# glVar = 5
+# def myFunc():
+#    global glVar
+
+# COMMENTS AND DOCUMENTING 	= tidak di jalankan/dieksekusi, pengunaan utama digunakan untuk debugging dan breaking down code untuk programer lain agar mudah mengerti
+
+# DOCUMENT STRING 		= text DESCRIBING fungsi, digunakan setelah fungsi dibuat, mengunakan triple quotes sebagai pembuka dan penutup 
+>>> def fungD():
+...     '''
+...     ini adalah dokumen string mengunakan 
+...     triple kutip sebagai pembuka dan penutupnya
+...     ini dapat terdiri dalam beberapa baris
+...     '''
+... 
+>>> x = fungD()
+>>> print x
+None 
+# kalimat yang kita buat tidak ditampilkan tapi kalimat tersebut adalah bagian dari fungsi yang kiat buat
+
+# COMMETS 			= memberitahu program untuk IGNORE segala sesuatu pada satu baris, ditandai dengan '#' kresh simbol, pengunaannya untuk memberi catatan tau ignore baris code
+>>> # comment 1
+... x = 5 #2
+>>> # 3
+... 
+>>> print x 
+5
+
+# baik comment 1, 2 dan 3 tidak ditampilkan yang ditampilkan adalah 5
+
+# CONTOH LAIN
+>>> def fungD():
+...     '''
+...     ini adalah dokumen string mengunakan
+...     '''
+...     # ini contoh comments , abaikan
+...     pass
+... 
+>>> print fungD.__doc__
+
+        ini adalah dokumen string mengunakan
+
