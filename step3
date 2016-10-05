@@ -1,0 +1,127 @@
+### tanda >>> berarti baris yang di ekskusi melalui pyhton ###
+
+# CONDITIONALS  : sebuah cara untuk mengecek beberapa hal 
+
+# IF : jika kondisi true makan baris dibawanya akan diekskusi
+	if(kondisi ini true):
+  	 	 lakukan baris ini!
+>>> mail = 5
+>>> if mail:
+...     print "mail time!"
+... #pencet enter lagi untuk ekskusi 
+
+mail time!
+
+
+# else : tangkap semua variabel yang tidak sesuai dengan kondisi utama
+	if (..):
+		....
+	else:
+		....
+
+>>> mail = 0 
+>>> if mail:
+...     print "mail time!"
+... else:
+...     print "no mail :("
+... 
+no mail :(
+## mail = 0 artinya adalah false, ketika false maka kondisi if yang utama harusnya true di lewatkan dan yang diekskusi adalah else karena tidak sesuai.
+
+# elif= else if : digunakan setelah kondisi 'IF', membuat kondisi lain dari kondisi utama
+	if (...):
+		....
+	elif (...):
+		....
+	else:
+		...
+
+# tab : penting diingat, lebih baik gunakan tab dari pada spasi
+
+# COMPARASION OPERATOR : cara uintuk compare 2 nilai
+# < Less than
+# <= Less than or equal
+# > grater than
+# >= greate than or equal 
+# == equal 
+# != not equal 
+# PARENTHESIS () : jaga code tetap bersih gunakan () untuk kondisi. contoh if (5 < 4): jadi tidak pengaruh sebetulnya tapi sebagai pembersih aja
+
+>>> if 1 < 2:
+...     print "1 < 2, itu benar"
+... 
+1 < 2, itu benar
+
+>>> if (2 > 1):
+...     print "2 > 1, itu benar"
+... 
+2 > 1, itu benar
+
+>>> if (7 < 6):
+...     print "whaaa"
+... else:
+...     print "7 is greater than 6"
+... 
+7 is greater than 6
+
+# AND : mengabungkan dua CONDITIONS , hanya if True dijalanakn jika kedua kondisi kedua bernilai true
+# contoh megunakan and dengan dua kondisi bernilai true
+>>> if (7) and (6): 	
+...     print "yep"
+... 
+yep
+# contoh mengunakan and dengan salah satu kondisi false 
+>>> if (7) and (0):
+...     print "yep"
+... 
+>>> # kosong perintah if tidak di ekskusi karena 'and' ada yang false
+
+
+# OR : mengabungkan dua CONDITIONS , perintah if (True) dijalanakn jika salah satu kondisi bernilai true jika berniali false kedua maka tidak dijalankan 
+>>> if (2) or (3):
+...     print "true"
+... 
+true
+>>> if (2) or (0):
+...     print "true"
+... 
+true
+>>> if (0) or (0):
+...     print "true"
+... 
+
+>>> if not(0):
+...     print 'true'
+... 
+true
+
+# QUIZ
+
+>>> if (7 < 6) and (4 > 3):
+...     print 'if'
+... elif (7 > 6):
+...     print 'elif'
+... else:
+...     print 'else'
+... 
+elif
+# pada barif if pertama 'and' tidak sesuai karena ada kondisi yang false maka pertanyaan if diabaikan 
+# pada baris ke tiga ada kondisi baru dimana 7 > 6 itu adalah true maka elif yang ditampilkan, 
+# jika bagian ini false maka akan dilanjutkan ke baris else tapi karena true maka diabaikan yang else
+
+>>> if not (6):
+...     print "true"
+... else:
+...     print "false"
+... 
+false
+# pada baris pertama ada kata 'not' harusnya nilainya true karena ada 'not' jadi false dan keluaran dari else yang ditampilkan
+
+>>> if (7) or (3>5):
+...     print "true"
+... else:
+...     print "false"
+... 
+true
+# baris pertama pernyataan dengan 'or' dimana pertanyaan if dengan or akan bernilai true jika salah satu dari 2 kondisi bernilai true dan baris else di abaikan.
+# kondisi pertama : 7 artinya true, 0 artinya false kondisi ke dua: 3 > 5 false
