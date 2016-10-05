@@ -1,0 +1,199 @@
+### tanda >>> berarti baris yang di ekskusi melalui pyhton ###
+
+# Strings : cara penulisan tipe string yang terdiri dari huruf - huruf kedalam variable
+>>> x = 'ham'
+>>> x
+'ham'
+>>> x = "hamdsandwich"
+>>> x
+'hamdsandwich'
+
+# combining strings 
+# gunakan '+' untuk gabunganan dua string bersaman
+>>> y = x + "book"
+>>> y
+'hamdsandwichbook'
+>>> y = x + " book"
+>>> y
+'hamdsandwich book'
+
+# combinging numbers + strings 
+# str() : digunakan untuk convert ke sebuah strings 
+# jika tidak diconvert dahulu nilai angka menjadi string maka akan error jadi convert dengan str()
+>>> z = 10
+>>> y = x + z
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> y = x + str(z) # convert dulu menjadi string nilai dari z 
+>>> y
+'hamdsandwich10'
+
+# string : special karakter 
+# menempatkan nilai angka dengan stringgs 
+# ada 3 format yang akan dijelaskan 
+# %d dimaksudkan untuk sebuah INT sedangkan %f untuk float, lalu nilai %d yang akan dipangil adalah setelah % dalam hal ini variabel z (%z) yaitu angka 10 INT
+
+# "%d" %NUM = subtitute INTEGER # format1
+>>> z = 10
+>>> y = "somenting %d" %z 
+>>> y
+'somenting 10'
+
+# "%f" %NUM = subtitute FLOAT #format2
+>>> z = 10
+>>> y = "Someting %f" %z
+>>> y
+'Someting 10.000000'
+
+# "%.3f" %NUM = subtitute CUT OFF FLOAT  #format3
+>>> z = 10
+>>> y = "Someting %.3f" %z
+>>> y
+'Someting 10.000'
+>>> z = 1.6272627262
+>>> y = "Something %.3f" %z
+>>> y
+'Something 1.627'
+
+# strings : special charaters "\n\n" newline (enter key)
+>>> x = "pala\n\nbuntut"
+>>> print x 
+pala
+
+buntut
+
+# strings : special charaters "\t\t" tab karakter (tab key)
+>>> x = "pala\t\tbuntut"
+>>> print x 
+pala            buntut
+
+# keyword 'IN' : digunakan untuk mengecek jika sebuah nilai bersaaman pada nilai lain hasilnya adalah True atau False
+>>> "ham" in "hamsandwich" # true atau false?
+True
+>>> 'a' in 'ham'
+True
+
+# in more action
+>>> y = "ham"
+>>> "s" in y
+False
+>>> "s" in "somethings"
+True
+
+
+# LISTS : data structure, digunakan untuk menyimpan semua data TYPES(int,float,string,etc), list dibuat mengunakan [] 
+>>> x = []
+>>> x
+[]
+>>> x = ["ham",4,2.2]
+>>> x
+['ham', 4, 2.2]
+
+# LIST : fungsi append(value) : menambahkan nilai pada ahkir list
+>>> x.append(5)
+>>> x
+['ham', 4, 2.2, 5]
+
+# LIST : fungsi insert(Location,VALUE) : menabhakan nilai pada lokasi yang ditentukan
+>>> x.insert(1,3.1415)
+>>> x
+['ham', 3.1415, 4, 2.2, 5]
+
+# LIST : fungsi pop(location) : hapus dan kembalikan value ke lokasinya
+>>> x.pop(1)
+3.1415
+>>> x
+['ham', 4, 2.2, 5]
+
+# LIST : fungsi len(string or list) : menghasilkan berapa banyak huruf yang ada ada di string
+>>> len("words")
+5
+>>> len(x)
+4
+
+# LIST : fungsi list(item) : convert item ke sebuah list, split
+>>> list("ham")
+['h', 'a', 'm']
+>>> y = []
+>>> y.append("ham")
+>>> y
+['ham']
+
+# tuples () tidak bisa di adjustables tapi list bisa di adjustable [] 
+
+# DICTONARY : digunakan untuk binding KEYS to VALUES, aka hastables, maps
+>>> sam = {}
+>>> sam
+{}
+
+# membuat DICTONARY
+>>> sam ["weapon"] = "chainsaw"
+>>> sam ["health"] = 10
+>>> sam
+{'weapon': 'chainsaw', 'health': 10}
+>>> sam["weapon"] #indexing
+'chainsaw'
+
+# menghapus konten dari DICTONARY
+>>> del sam["health"]
+>>> sam
+{'weapon': 'chainsaw'}
+
+
+# QUIZZ
+>>> a = str( int(2.23) + float(14)) + "tomatoes"
+>>> a
+'16.0tomatoes'
+# variabel a diconvert menjadi string, setelah menambahkan variael interger, float dan string dan hasil a nya dapat gabungkan angka dan huruf karena str()
+
+>>> "ham Ham".upper()
+'HAM HAM'
+# upper() menjadikan semua huruf KAPITAL
+
+>>> "SUper Baby" .lower()
+'super baby'
+# lower() menjadikan semua huruf menjadi kecil
+
+
+>>> b = "i am ham"
+>>> b.split()
+['i', 'am', 'ham']
+# split() menghapus spasi, menjadikan variabel menjadi 'ter' list
+
+>>> b.split("m")
+['i a', ' ha', '']
+# split(m) menghapus semua huruf m 
+
+>>> b.join(a)
+'1i am ham6i am ham.i am ham0i am hamti am hamoi am hammi am hamai am hamti am hamoi am hamei am hams'
+# join() mengambungkan dua variabel 'sepertinya'
+
+
+>>> "int: %d, float %.5f" %(14.4, 55.2)
+'int: 14, float 55.20000'
+# %d menampilan bilangan integer setelah kata int, dan %.5f menampilkan bilangan float setelah kata float, dan bilangkanya ada di baris ahkir %(14.4, 55.2)
+
+>>> L = [1,6,7,26,8,3,4,5]
+# membuat list
+
+>>> L[:]
+[1, 6, 7, 26, 8, 3, 4, 5]
+# tampilakan semua isi list 
+
+>>> L[:2]
+[1, 6]
+# tampilan list dengan index 1 sampai 2 awal
+
+>>> L[2:]
+[7, 26, 8, 3, 4, 5]
+# tampilan list tanpa 2 index awal
+
+>>> L[::2]
+[1, 7, 8, 4]
+# tampilan list dengan loncat 2 index 'genap'
+
+>>> L[1::2]
+[6, 26, 3, 5]
+# tampilan list dengan lompat index pertama
+
